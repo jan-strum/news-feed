@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SingleComment from '../SingleComment/SingleComment'
 
+import './AllComments.css'
+
 export default function AllComments({ comments }) {
   return (
-    <div>
+    <div id='comments'>
       <h4>Comments</h4>
       {comments.map(comment => {
         const { id, name, body } = comment

@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import './SingleComment.css'
+
 export default function SingleComment({ name, body }) {
   return (
-    <div>
+    <div id='comment'>
       <h5>{name}</h5>
-      <p>{body}</p>
+      <p id='comment-body'>{body}</p>
     </div>
   )
 }

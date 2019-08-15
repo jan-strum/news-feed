@@ -19,7 +19,7 @@ export default function FullPost({ match }) {
 
   const { title, body } = post
   return (
-    <div>
+    <div className='post-container'>
       <h3>{title}</h3>
       <p>{body}</p>
       <AllComments comments={comments} />
