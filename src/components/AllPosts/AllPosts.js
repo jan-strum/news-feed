@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { SinglePost } from '../SinglePost'
 
 import { getPosts } from '../../hooks/posts'
 
@@ -14,12 +15,7 @@ export default function AllPosts() {
       {posts.map(post => {
         const { id, title, body } = post
 
-        return (
-          <div id={id}>
-            <div>{title}</div>
-            <div>{body}</div>
-          </div>
-        )
+        return <SinglePost id={id} title={title} body={body} />
       })}
     </div>
   )

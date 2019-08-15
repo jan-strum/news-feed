@@ -1,5 +1,10 @@
 import React from 'react'
 
-export default function SinglePost() {
-  return <div>Single Post</div>
+export default function SinglePost({ title, body }) {
+  return (
+    <div>
+      <h3>{title}</h3>
+      <p>{body}</p>
+    </div>
+  )
 }
