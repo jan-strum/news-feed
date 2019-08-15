@@ -10,7 +10,7 @@ export default function FullPost({ match }) {
 
   useEffect(() => {
     getPost(id, setPost)
-  }, [])
+  }, [id])
 
   const { title, body } = post
   return (
