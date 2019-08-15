@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom'
 import { AllPosts } from './components/AllPosts'
-import { SinglePost } from './components/SinglePost'
+import { FullPost } from './components/FullPost'
 
 import './App.css'
 
@@ -17,7 +17,7 @@ export default function App() {
         <Switch>
           <Redirect exact from='/' to='/posts' />
           <Route exact path='/posts' component={AllPosts} />
-          <Route exact path='/posts/:id' component={SinglePost} />
+          <Route exact path='/posts/:id' component={FullPost} />
         </Switch>
       </Router>
     </div>
