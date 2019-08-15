@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { SinglePost } from '../SinglePost'
 
 import { getPosts } from '../../hooks/posts'
@@ -15,7 +16,11 @@ export default function AllPosts() {
       {posts.map(post => {
         const { id, title, body } = post
 
-        return <SinglePost key={id} title={title} body={body} />
+        return (
+          <Link to={`/posts/${id}`} key={id}>
+            <SinglePost title={title} body={body} />
+          </Link>
+        )
       })}
     </div>
   )
