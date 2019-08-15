@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default function SinglePost({ title, body }) {
   return (
-    <div>
+    <div className='post-container'>
       <h3>{title}</h3>
       <p>{body}</p>
     </div>
