@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
+import { Loading } from '../Loading'
 import { AllComments } from '../AllComments'
 
 import { getPost } from '../../hooks/posts'
@@ -18,12 +19,14 @@ export default function FullPost({ match }) {
   }, [id])
 
   const { title, body } = post
-  return (
+  return title && body ? (
     <div className='post-container'>
       <h3>{title}</h3>
       <p>{body}</p>
       <AllComments comments={comments} />
     </div>
+  ) : (
+    <Loading />
   )
 }
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
+import { Loading } from '../Loading'
 import { SinglePost } from '../SinglePost'
 
 import { getPosts } from '../../hooks/posts'
@@ -13,7 +15,7 @@ export default function AllPosts() {
     getPosts(setPosts)
   }, [])
 
-  return (
+  return posts.length ? (
     <div id='all-posts'>
       {posts.map(post => {
         const { id, title, body } = post
@@ -25,5 +27,7 @@ export default function AllPosts() {
         )
       })}
     </div>
+  ) : (
+    <Loading />
   )
 }
