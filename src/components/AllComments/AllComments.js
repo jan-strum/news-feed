@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import SingleComment from '../SingleComment/SingleComment'
 
 export default function AllComments({ comments }) {
   console.log(comments)
@@ -8,12 +9,7 @@ export default function AllComments({ comments }) {
       <h4>Comments</h4>
       {comments.map(comment => {
         const { id, name, body } = comment
-        return (
-          <div id={id}>
-            <h3>{name}</h3>
-            <p>{body}</p>
-          </div>
-        )
+        return <SingleComment key={id} name={name} body={body} />
       })}
     </div>
   )
@@ -27,6 +23,6 @@ AllComments.propTypes = {
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
       body: PropTypes.string.isRequired
-    }).is
+    }).isRequired
   ).isRequired
 }
