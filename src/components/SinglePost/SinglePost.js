@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function SinglePost({ title, body }) {
   return (
@@ -7,4 +8,9 @@ export default function SinglePost({ title, body }) {
       <p>{body}</p>
     </div>
   )
+}
+
+SinglePost.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired
 }

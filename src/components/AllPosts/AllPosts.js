@@ -15,7 +15,7 @@ export default function AllPosts() {
       {posts.map(post => {
         const { id, title, body } = post
 
-        return <SinglePost id={id} title={title} body={body} />
+        return <SinglePost key={id} title={title} body={body} />
       })}
     </div>
   )
