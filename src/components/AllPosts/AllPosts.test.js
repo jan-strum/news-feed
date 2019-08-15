@@ -1,7 +1,6 @@
 import React from 'react'
 import { AllPosts } from './'
 import { Loading } from '../Loading'
-import { SinglePost } from '../SinglePost'
 import { shallow } from 'enzyme'
 
 let wrapper
