@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function SingleComment({ name, body }) {
   return (
@@ -7,4 +8,9 @@ export default function SingleComment({ name, body }) {
       <p>{body}</p>
     </div>
   )
+}
+
+SingleComment.propTypes = {
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired
 }
