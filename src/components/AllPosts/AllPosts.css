@@ -1,0 +1,15 @@
+#all-posts {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-link {
+  text-decoration: none;
+  color: black;
+}
+
+.post-link:visited {
+  color: black;
+}
