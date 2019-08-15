@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import SingleComment from '../SingleComment/SingleComment'
 
 export default function AllComments({ comments }) {
-  console.log(comments)
   return (
     <div>
       <h4>Comments</h4>
