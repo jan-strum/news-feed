@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { AllComments } from '../AllComments'
 
 import { getPost } from '../../hooks/posts'
 import getComments from '../../hooks/comments'
@@ -20,18 +21,7 @@ export default function FullPost({ match }) {
     <div>
       <h3>{title}</h3>
       <p>{body}</p>
-      <div>
-        <h3>Comments:</h3>
-        {comments.map(comment => {
-          const { id, title, body } = comment
-          return (
-            <div id={id}>
-              <h3>{title}</h3>
-              <p>{body}</p>
-            </div>
-          )
-        })}
-      </div>
+      <AllComments comments={comments} />
     </div>
   )
 }
