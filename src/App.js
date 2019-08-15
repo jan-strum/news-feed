@@ -1,24 +1,25 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import { AllPosts } from './components/AllPosts'
+import { SinglePost } from './components/SinglePost'
+
 import './App.css'
 
-function App() {
+export default function App() {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Redirect exact from='/' to='/posts' />
+          <Route exact path='/posts' component={AllPosts} />
+          <Route exact path='/posts/:id' component={SinglePost} />
+        </Switch>
+      </Router>
     </div>
   )
 }
-
-export default App
